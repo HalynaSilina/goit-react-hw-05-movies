@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { fetchTrendingMovies } from 'Api-service/ApiService';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
-  const imageBaseUrl = 'https://image.tmdb.org/t/p/w500';
+  const imageBaseUrl = 'https://image.tmdb.org/t/p/w200';
   useEffect(() => {
     const trendingMovies = async () => {
       try {
@@ -24,15 +24,19 @@ const Home = () => {
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>
-            <NavLink to={`movies/${movie.id}`}>
-            <article>
-              <img
-                src={`${imageBaseUrl}${movie.backdrop_path}`}
-                alt={movie.title}
-              />
-              {movie.title || movie.name}
-            </article>
-            </NavLink>
+            <Link to={`movies/${movie.id}`}>
+              <article>
+                <div>
+                  <p>Rating: {movie.vote_average}</p>
+                <img
+                  src={`${imageBaseUrl}${movie.poster_path}`}
+                  alt={movie.title}
+                />
+                <p>{movie.title}({movie.original_title})</p>
+                <p>{movie.overview}</p>
+                </div>
+              </article>
+            </Link>
           </li>
         ))}
       </ul>

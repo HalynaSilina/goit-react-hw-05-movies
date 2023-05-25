@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const CastList = ({ credits }) => {
   const imageBaseUrl = 'https://image.tmdb.org/t/p/w200';
   return (
@@ -20,4 +22,8 @@ export const CastList = ({ credits }) => {
       })}
     </ul>
   );
+};
+
+CastList.propTypes = {
+  credits: PropTypes.array.isRequired,
 };

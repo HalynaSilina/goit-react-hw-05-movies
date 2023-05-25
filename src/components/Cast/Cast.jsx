@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchCredits } from 'Api-service/ApiService';
-import { CastList } from './CastList';
+import { CastList } from '../CastList/CastList';
 
 const Cast = () => {
   const [credits, setCredits] = useState([]);

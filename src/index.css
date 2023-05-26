@@ -7,6 +7,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ecfcff;
+  color: #28161c;
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 400;
+  font-style: normal;
 }
 
 code {
@@ -22,7 +28,12 @@ p {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+a {
   text-decoration: none;
+  font-style: normal;
+  color: inherit;
 }
 img {
   display: block;

@@ -1,0 +1,43 @@
+.section {
+  margin-top: 70px;
+  padding: 24px;
+}
+
+.section__title {
+  margin-bottom: 24px;
+  margin-left: 24px;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #402e32;
+}
+.form {
+  position: relative;
+  margin-left: 24px;
+}
+
+.searchInput {
+  width: 500px;
+  height: 50px;
+  padding-left: 50px;
+  font-size: 18px;
+  border-radius: 8px;
+  border-color: transparent;
+  outline: 2px solid #eb9a28;
+}
+
+.searchInput:placeholder-shown {
+  font-size: 18px;
+  outline-color: #007aa7;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  min-width: 50px;
+  transform: translateY(4px);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

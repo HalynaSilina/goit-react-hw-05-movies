@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import GalleryItem from 'components/GalleryItem/GalleryItem';
 import css from './Gallery.module.css';
 
@@ -27,3 +28,8 @@ const Gallery = ({ movies, state }) => {
   );
 };
 export default Gallery;
+
+Gallery.propTypes = {
+  movies: PropTypes.array.isRequired,
+  state: PropTypes.object.isRequired,
+};

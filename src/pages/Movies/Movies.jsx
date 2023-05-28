@@ -1,9 +1,9 @@
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Gallery from 'components/Gallery/Gallery';
 import { fetchByQuery } from 'Api-service/ApiService';
 import { MdYoutubeSearchedFor } from 'react-icons/md';
 import { IconContext } from 'react-icons';
+import Gallery from 'components/Gallery/Gallery';
 import css from './Movies.module.css';
 
 const Movies = () => {
@@ -32,7 +32,6 @@ const Movies = () => {
     const form = e.currentTarget;
     setSearchParams({ searchQuery: form.elements.query.value.trim() });
   };
-  console.log(searchedMovies);
 
   return (
     <div className={css.section}>
@@ -50,7 +49,8 @@ const Movies = () => {
           </button>
         </IconContext.Provider>
       </form>
-      {searchedMovies.length > 0 && (<Gallery movies={searchedMovies} state={{ from: location }}/>     
+      {searchedMovies.length > 0 && (
+        <Gallery movies={searchedMovies} state={{ from: location }} />
       )}
     </div>
   );

@@ -20,7 +20,6 @@ const Home = () => {
     };
     trendingMovies();
   }, []);
-
   return (
     <section className={css.section}>
       <h1 className={css.section__title}>Trending movies today</h1>

@@ -17,5 +17,11 @@
 }
 
 .navlink {
-    color: #000;
+    color: #402E32;
 }
+
+.navlink:focus,
+.navlink:hover{
+  text-shadow: #FFF7E9 1px 0 10px;
+}
+

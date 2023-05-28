@@ -35,8 +35,14 @@ a {
   font-style: normal;
   color: inherit;
 }
+
+a.active {
+  color: #EB9A28;
+}
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+

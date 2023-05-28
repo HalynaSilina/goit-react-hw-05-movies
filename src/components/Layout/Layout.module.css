@@ -9,7 +9,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content:flex-start;
   margin-left: 24px;
   gap: 48px;
   font-size: 36px;

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchReviews } from 'Api-service/ApiService';
 import { ReviewsList } from '../ReviewsList/ReviewsList';
+import css from './Reviews.module.css';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -18,10 +19,14 @@ const Reviews = () => {
   }, [movieId]);
 
   return (
-    <>
-      <div>Reviews</div>
-      {reviews.length > 0 ? <ReviewsList reviews={reviews}/> : <div>No reviews for this movie.</div>}
-    </>
+    <section className={css.section}>
+      <h3 className={css.section__title}>Reviews</h3>
+      {reviews.length > 0 ? (
+        <ReviewsList reviews={reviews} />
+      ) : (
+        <div className={css.noInfo}>No reviews for this movie.</div>
+      )}
+    </section>
   );
 };
 export default Reviews;

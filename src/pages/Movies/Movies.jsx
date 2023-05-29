@@ -50,7 +50,7 @@ const Movies = () => {
         </IconContext.Provider>
       </form>
       {searchedMovies.length > 0 && (
-        <Gallery movies={searchedMovies} state={{ from: location }} />
+        <Gallery movies={searchedMovies} state={{ from: location }} path={''}/>
       )}
     </div>
   );

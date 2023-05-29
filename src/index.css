@@ -46,3 +46,8 @@ img {
   height: auto;
 }
 
+.loader-wrapper {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}

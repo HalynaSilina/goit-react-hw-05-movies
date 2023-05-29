@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { fetchTrendingMovies } from 'Api-service/ApiService';
 import { useLocation } from 'react-router-dom';
+
 import Gallery from 'components/Gallery/Gallery';
 import css from './Home.module.css';
+import Loader from 'components/Loader/Loader';
 
 const Home = () => {
   const location = useLocation();
@@ -23,8 +25,10 @@ const Home = () => {
   return (
     <section className={css.section}>
       <h1 className={css.section__title}>Trending movies today</h1>
-      {movies.length > 0 && (
-        <Gallery movies={movies} state={{ from: location }} />
+      {movies.length > 0 ? (
+        <Gallery movies={movies} state={{ from: location }} path={'movies/'}/>
+      ) : (
+        <Loader />
       )}
     </section>
   );

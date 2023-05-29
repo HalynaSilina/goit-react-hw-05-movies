@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchCredits } from 'Api-service/ApiService';
 import { CastList } from '../CastList/CastList';
+import css from './Cast.module.css';
 
 const Cast = () => {
   const [credits, setCredits] = useState([]);
@@ -17,14 +18,14 @@ const Cast = () => {
     fetchCast();
   }, [movieId]);
   return (
-    <>
-      <div>Cast</div>
+    <section className={css.section}>
+      <h3 className={css.section__title}>Cast</h3>
       {credits.length > 0 ? (
         <CastList credits={credits} />
       ) : (
-        <div>No info about the cast.</div>
+        <div className={css.noInfo}>No info about the cast.</div>
       )}
-    </>
+    </section>
   );
 };
 
